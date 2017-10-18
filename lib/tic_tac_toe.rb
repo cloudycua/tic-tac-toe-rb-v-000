@@ -84,9 +84,9 @@ end
 def play(board)
   while over?(board) != true
     turn(board)
-  end
-  if draw?(board)
-    puts "The game ended in a draw."
-  else puts "The winner of the game is #{winner(board)}."
+    if draw?(board)
+      puts "The game ended in a draw."
+    else puts "The winner of the game is #{winner(board)}."
+    end
   end
 end
