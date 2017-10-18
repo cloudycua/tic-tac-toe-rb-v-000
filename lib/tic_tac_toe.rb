@@ -33,5 +33,4 @@ def valid_move?(board, index)
   index >= 0 && index <= 8 && !position_taken(board, index) == true
 end
 
-
-
+def turn(input)
