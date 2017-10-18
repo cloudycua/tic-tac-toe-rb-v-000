@@ -21,6 +21,14 @@ def input_to_index(input)
   input.to_i - 1
 end
 
+def turn_count(board)
+  board.count{|token| token == "X" || token == "O"}
+end
+
+def current_player(board)
+  turn_count(board) % 2 == 0 ? "X" : "O"
+end
+
 def move(board, index, current_player = "X")
   board[index] = current_player
 end
@@ -38,20 +46,14 @@ def turn(input)
     input = gets.strip
     index = input_to_index(input)
     if valid_move?(board, index)
-      move (board, index, current_player = "X")
+      token = current_player(board)
+      move (board, index, token)
       display_board(board)
     else
       turn(board)
     end
 end
 
-def turn_count(board)
-  board.count{|token| token == "X" || token == "O"}
-end
-
-def current_player(board)
-  turn_count(board) % 2 == 0 ? "X" : "O"
-end
 
 def won?(board)
   WIN_COMBINATIONS.detect do |combo|
