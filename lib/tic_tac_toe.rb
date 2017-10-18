@@ -49,6 +49,7 @@ def turn(input)
     else
       count == 0 || count%2 == 0
       move (board, index, "O")
+      display_board(board)
       count += 1
     end
   ends
