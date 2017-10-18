@@ -82,9 +82,9 @@ def winner(board)
 end
 
 def play(board)
-  turn_count = 0
-  while turn_count < 9
+  while over?(board) != true
     turn(board)
-    turn_count += 1
   end
+  if draw?(board)
+    puts "The game ended in a draw."
 end
