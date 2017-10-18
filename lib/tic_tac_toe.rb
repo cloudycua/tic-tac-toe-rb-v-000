@@ -29,7 +29,7 @@ def current_player(board)
   turn_count(board) % 2 == 0 ? "X" : "O"
 end
 
-def move(board, index, current_player = "X")
+def move(board, index, current_player)
   board[index] = current_player
 end
 
