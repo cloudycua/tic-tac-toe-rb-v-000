@@ -50,4 +50,5 @@ def turn(input)
       move (board, index, "O")
       count += 1
     end
+  ends
 end
