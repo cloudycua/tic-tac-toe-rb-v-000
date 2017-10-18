@@ -44,6 +44,7 @@ def turn(input)
     elsif
       count == 0 || count%2 == 0
       move (board, index, "X")
+      display_board(board)
       count += 1
     else
       count == 0 || count%2 == 0
