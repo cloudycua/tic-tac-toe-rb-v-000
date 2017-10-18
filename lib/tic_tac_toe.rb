@@ -78,6 +78,7 @@ end
 def winner(board)
   if won?(board)
     return won?(board.first)
+  end
 end
 
 def play(board)
