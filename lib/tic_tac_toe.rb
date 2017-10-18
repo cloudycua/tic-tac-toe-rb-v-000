@@ -89,6 +89,7 @@ def winner(board)
     elsif board[combo[0]] == "O"
       return "O"
     end
+  end
 end
 
 def play(board)
