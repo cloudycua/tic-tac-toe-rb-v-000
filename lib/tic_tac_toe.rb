@@ -19,3 +19,4 @@ end
 
 def input_to_index(inputx)
   input.to_i - 1
+end
