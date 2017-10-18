@@ -76,8 +76,8 @@ def over?(board)
 end
 
 def winner(board)
-  if winning_combo = won?(board)
-    board[winning_combo.first]
+  if won?(board)
+    winning_combo = won?(board.first)
   end
 end
 
@@ -86,7 +86,7 @@ def play(board)
     turn(board)
     if draw?(board)
       puts "The game ended in a draw."
-    else puts "The winner of the game is #{winner(board)}."
+    elsif  puts "The winner of the game is #{winner(board)}."
     end
   end
 end
