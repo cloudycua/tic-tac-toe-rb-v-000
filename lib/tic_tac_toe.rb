@@ -34,3 +34,5 @@ def valid_move?(board, index)
 end
 
 def turn(input)
+  index = input_to_index(input)
+end
