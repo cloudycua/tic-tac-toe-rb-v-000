@@ -57,13 +57,9 @@ end
 
 def won?(board)
   WIN_COMBINATIONS.detect do |combo|
-    if
       board[combo[0]] == board[combo[1]] &&
       board[combo[1]] == board[combo[2]] &&
       position_taken?(board, combo[0])
-        return combo
-      else false
-    end
   end
 end
 
