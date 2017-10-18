@@ -78,3 +78,13 @@ end
 def draw?(board)
   full?(board) && !won?(board)
 end
+
+def over?(board)
+  won?(board) || full?(board)
+end
+
+def winner(board)
+  if winning_combo = won?(board)
+    board[winning_combo.first]
+  end
+end
