@@ -83,11 +83,11 @@ def winner(board)
       board[combo[0]] == board[combo[1]] &&
       board[combo[1]] == board[combo[2]] &&
       position_taken?(board, combo[0])
-    end
-    if board[combo[0]] == "X"
-      return "X"
-    elsif board[combo[0]] == "O"
-      return "O"
+      if board[combo[0]] == "X"
+        return "X"
+      elsif board[combo[0]] == "O"
+        return "O"
+      end
     end
   end
 end
