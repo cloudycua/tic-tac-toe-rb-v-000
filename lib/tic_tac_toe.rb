@@ -34,13 +34,14 @@ def valid_move?(board, index)
 end
 
 def turn(input)
-  count = 0
-  while count < 9
     puts "Please enter 1-9:"
     input = gets.strip
     index = input_to_index(input)
-    if position_taken == true
+    while position_taken == true
       puts "Invalid move."
+      puts "Please enter 1-9:"
+      input = gets.strip
+      index = input_to_index(input)
     elsif
       count == 0 || count%2 == 0
       move (board, index, "X")
