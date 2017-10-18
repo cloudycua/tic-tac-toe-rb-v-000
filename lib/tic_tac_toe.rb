@@ -30,7 +30,7 @@ def position_taken?(board, location)
 end
 
 def valid_move?(board, index)
-  index >= 0 && index <= 8 && !position_taken(board, index) == true
+  index >= 0 && index <= 8 && !position_taken(board, index)
 end
 
 def turn(input)
