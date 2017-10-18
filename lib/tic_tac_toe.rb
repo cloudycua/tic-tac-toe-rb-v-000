@@ -73,6 +73,9 @@ end
 
 def over?(board)
   if !won?(board) == false || full?(board) == true || draw?(board) == true
+    true
+  else false
+  end
 end
 
 def winner(board)
