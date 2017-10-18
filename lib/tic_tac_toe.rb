@@ -25,10 +25,13 @@ def move(board, index, player_token)
   board[index] = player_token
 end
 
-def position_taken(board, index)
+def position_taken?(board, index)
   board[index] != " " && board[index] != "" && board[index] != nil
 end
 
-def valid_move(board, index)
+def valid_move?(board, index)
   index >= 0 && index <= 8 && !position_taken(board, index) == true
 end
+
+
+
