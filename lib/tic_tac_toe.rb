@@ -88,4 +88,5 @@ def play(board)
   if draw?(board)
     puts "The game ended in a draw."
   else puts "The winner of the game is #{winner(board)}."
+  end
 end
