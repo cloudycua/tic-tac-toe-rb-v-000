@@ -43,7 +43,7 @@ def turn(input)
       puts "Invalid move."
     elsif
       count == 0 || count%2 == 0
-      move (board, index, "X")
+      move (board, index, current_player(board))
       display_board(board)
       count += 1
     else
