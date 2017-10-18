@@ -62,6 +62,7 @@ def won?(board)
       board[combo[1]] == board[combo[2]] &&
       position_taken?(board, combo[0])
         return combo
+      else false
     end
   end
 end
